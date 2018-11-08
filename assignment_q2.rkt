@@ -14,4 +14,25 @@
 (provide ins_beg)
 
 (define (ins_beg el lst)
-  (display "Hello, I'm ins_beg!\n"))
+(append '(el) (lst)))
+
+
+(provide ins_end)
+
+(define (ins_end el lst)
+  (append '(lst) '(el)))
+
+
+(provide count_top_level)
+
+(define (count_top_level lst)
+  (if (null? lst)
+      0
+      (+ 1 (count_top_level (cdr lst)))))
+
+
+
+
+
+
+  
